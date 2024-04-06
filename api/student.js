@@ -1,7 +1,6 @@
+const express = require('express');
 var { Student } = require("./bd");
-var express = require("express");
-var router = express.Router();
-
+const router = express.Router();
 
 router.get("/", async function (req, res, next) {
   try {
@@ -10,7 +9,6 @@ router.get("/", async function (req, res, next) {
   } catch (error) {
     next(error);
   }
-  res.send("estudent get");
 });
 
 router.post("/", async function (req, res, next) {
